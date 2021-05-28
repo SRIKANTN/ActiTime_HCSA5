@@ -1,0 +1,241 @@
+<html>
+<head>
+<title>TestNG:  firefoxTest</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>firefoxTest</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>1/2/0</td>
+</tr><tr>
+<td>Started on:</td><td>Thu May 27 11:11:21 IST 2021</td>
+</tr>
+<tr><td>Total time:</td><td>120 seconds (120109 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com_ActiTime_Test.ValidLoginLogoutTest.validLoginLogout()'><b>validLoginLogout</b><br>Test class: com_ActiTime_Test.ValidLoginLogoutTest<br/>
+<a href="#Output-1256368972" onClick='toggleBox("Output-1256368972", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1256368972" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1256368972">
+Matching title is = actiTIME - Login<br/>
+Matching title is = actiTIME - Enter Time-Track<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.ElementClickInterceptedException: Element &lt;a id=&quot;logoutLink&quot; class=&quot;logout&quot; href=&quot;/logout.do&quot;&gt; is not clickable at point (1309,17) because another element &lt;div id=&quot;preInsertedTransformedMoireId&quot; class=&quot;transformedMoireClass&quot;&gt; obscures it
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:53&apos;
+System info: host: &apos;DESKTOP-IM24CK1&apos;, ip: &apos;192.168.1.101&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_261&apos;
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities {acceptInsecureCerts: false, browserName: firefox, browserVersion: 88.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20210504152106, moz:geckodriverVersion: 0.29.1, moz:headless: false, moz:processID: 39060, moz:profile: C:\Users\Admin\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webdriver.remote.sessionid: a9e3c74d-1010-4331-9a0a-dd2...}
+Session ID: a9e3c74d-1010-4331-9a0a-dd238b8b9c3a
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at com.sun.proxy.$Proxy9.click(Unknown Source)
+	at com_ActiTime_Page.ActiTIMEEnterTimeTrackPage.clickOnLogout(ActiTIMEEnterTimeTrackPage.java:25)
+	at com_ActiTime_Test.ValidLoginLogoutTest.validLoginLogout(ValidLoginLogoutTest.java:32)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1256368972", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1256368972'><pre>org.openqa.selenium.ElementClickInterceptedException: Element &lt;a id=&quot;logoutLink&quot; class=&quot;logout&quot; href=&quot;/logout.do&quot;&gt; is not clickable at point (1309,17) because another element &lt;div id=&quot;preInsertedTransformedMoireId&quot; class=&quot;transformedMoireClass&quot;&gt; obscures it
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:53&apos;
+System info: host: &apos;DESKTOP-IM24CK1&apos;, ip: &apos;192.168.1.101&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_261&apos;
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities {acceptInsecureCerts: false, browserName: firefox, browserVersion: 88.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20210504152106, moz:geckodriverVersion: 0.29.1, moz:headless: false, moz:processID: 39060, moz:profile: C:\Users\Admin\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webdriver.remote.sessionid: a9e3c74d-1010-4331-9a0a-dd2...}
+Session ID: a9e3c74d-1010-4331-9a0a-dd238b8b9c3a
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at com.sun.proxy.$Proxy9.click(Unknown Source)
+	at com_ActiTime_Page.ActiTIMEEnterTimeTrackPage.clickOnLogout(ActiTIMEEnterTimeTrackPage.java:25)
+	at com_ActiTime_Test.ValidLoginLogoutTest.validLoginLogout(ValidLoginLogoutTest.java:32)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</pre></div></td>
+<td>8</td>
+<td>com_ActiTime_Test.ValidLoginLogoutTest@3c5a99da</td></tr>
+<tr>
+<td title='com_ActiTime_Test.VerifyVersionTest.verifyVersion()'><b>verifyVersion</b><br>Test class: com_ActiTime_Test.VerifyVersionTest<br/>
+<a href="#Output-481473976" onClick='toggleBox("Output-481473976", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-481473976" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-481473976">
+Matching title is = actiTIME - Login<br/>
+Element is present...<br/>
+The actual version is = actiTIME 2020 Online<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: The following asserts failed:
+	expected [actiTIME 2020 ] but found [actiTIME 2020 Online]
+	at com_ActiTime_Test.VerifyVersionTest.verifyVersion(VerifyVersionTest.java:26)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 17 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace481473976", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace481473976'><pre>java.lang.AssertionError: The following asserts failed:
+	expected [actiTIME 2020 ] but found [actiTIME 2020 Online]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:43)
+	at com_ActiTime_Test.VerifyVersionTest.verifyVersion(VerifyVersionTest.java:26)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</pre></div></td>
+<td>0</td>
+<td>com_ActiTime_Test.VerifyVersionTest@47f37ef1</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com_ActiTime_Test.InvalidLoginTest.invalidLogin()'><b>invalidLogin</b><br>Test class: com_ActiTime_Test.InvalidLoginTest<br/>
+<a href="#Output-151455190" onClick='toggleBox("Output-151455190", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-151455190" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-151455190">
+Matching title is = actiTIME - Login<br/>
+Invalid user name = admin<br/>
+Invalid Password = damager<br/>
+Element is present...<br/>
+======================================<br/>
+Invalid user name = admin123<br/>
+Invalid Password = manager<br/>
+Element is present...<br/>
+======================================<br/>
+Invalid user name = 123<br/>
+Invalid Password = 345<br/>
+Element is present...<br/>
+======================================<br/>
+Invalid user name = #2<br/>
+Invalid Password = #@1<br/>
+Element is present...<br/>
+======================================<br/>
+</div>
+</td>
+<td></td>
+<td>15</td>
+<td>com_ActiTime_Test.InvalidLoginTest@ea4a92b</td></tr>
+</table><p>
+</body>
+</html>
